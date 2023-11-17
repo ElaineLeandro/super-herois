@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(39 172 213 / 51%);
+    font-family: 'Bebas Neue', sans-serif;
+}

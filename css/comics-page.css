@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white-:fff;
+    --gray-100: #f8f9fa;
+    --gray-200: #f0f0f0;
+    --gray-300: #e3e3e3;
+    --gray-400: #d8d8d8;
+    --gray-500: #bdbdbd;
+    --gray-600: #7e7e7e;
+    --gray-700: #565656;
+    --gray-800: #3d3d3d;
+    --gray-900: #262626;
+    --gray-text-color: #838383;
+    --logo-color: #111;
+}
+
+body{
+    background-color: var(--white-);
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.container-header{
+    background-color: var(--gray-800);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+   
+}
+
+.container-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.container-image > img{
+    max-width: 80px;
+    height: auto;  
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    width: 100vw;
+    border-top: 1px solid var(--gray-500);
+}
+.container-nav > nav > ul{
+    list-style-type: none;
+    display: flex;
+    padding-top: 10px;
+}
+.container-nav > nav > ul > li {
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+.container-nav > nav > ul > li > a {
+    text-decoration: none;
+    color: var(--gray-100);
+}
+
+.container-nav > nav > ul > li > a:hover {
+    color: #FF5733; /* Altere a cor desejada para o hover */
+}
+  
+.container-context{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: and;
+    width: 100%;
+    background-color: var(--gray-300);
+    padding: 40px;
+
+}
+
+.image {
+   width: 30vw;
+}
+
+.image > img{
+    max-width: 100%; 
+}
+
+
+.container-description{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+
+    
+   
+}
+
+
+.container-footer{
+    background-color: var(--logo-color);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+
+   
+}
+
+.footer-icons{
+    width: 80px;
+    display: flex;
+    justify-items: center;
+    gap: 10px;
+   
+}
+
+.footer-icons > a > img{
+    width: 100%;
+}
+
