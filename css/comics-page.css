@@ -7,8 +7,6 @@
     --gray-100: #f8f9fa;
     --gray-300: #e3e3e3;
     --gray-500: #bdbdbd;
-    --gray-600: #7e7e7e;
-    --gray-700: #565656;
     --gray-800: #3d3d3d;
     --gray-900: #262626;
     --gray-text-color: #838383;
@@ -116,6 +114,38 @@ body{
     font-size: 1rem;
 }
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .image > img {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .container-description > h1,
+  .container-description > p {
+    animation: slideIn 1s ease-in-out;
+  }
+  
+
 .container-footer{
     background-color: var(--gray-800);
     height: auto;
@@ -131,7 +161,7 @@ body{
 }
 
 .footer-icons{
-    width: 80px;
+    width: 100px;
     display: flex;
     justify-items: center;
     gap: 10px;
