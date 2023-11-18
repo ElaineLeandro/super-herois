@@ -4,96 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Super-Herois</title>
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="img/marvel.png" alt="Logo Marvel">
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="./assets/images/Vector.png" alt="Logo Marvel">
             <h2>LOGIN</h2>
         </div>
 
+        <div class="cabecalho__logo">
+            <img src="./assets/images/logo.png" alt="">
+        </div>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./pages/personagens/personagens.html">Herois</a></li>
-                <li><a href="./pages/comics-search.html">Comics</a></li>
+            <ul class="menu__lista">
+                <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="./pages/personagens/personagens.html">Herois</a></li>
+                <li class="menu__item"><a class="menu__link" href="./pages/comics-search.html">Comics</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h1>Super-Herois</h1>
-            <p>Super-herói é um tipo de personagem de ficção cujas características superam as do ser humano comum. Os
-                super-heróis geralmente possuem superpoderes, como força sobre-humana, a habilidade de voar, super
-                velocidade, visão de calor e outros. Os super-heróis existem em vários gêneros de entretenimento, como
-                filmes, histórias em quadrinhos, seriados de televisão, desenhos animados, jogos eletrônicos e
-                brinquedos.</p>
+
+        <section class="background__page">
+            <div class="video__container">
+                <video src="./assets/images/Spider-Man (EDIT) After Dark x Sweater Weather.mp4" autoplay loop
+                    muted></video>
+                <div class="text__overlay">
+                    <img src="./assets/images/Vector.svg" width="80" height="80">
+                    <h1 class="title__overlay">MARVEL SPIDER MAN</h1>
+                    <p>Super-herói é um tipo de personagem de ficção cujas características superam as do ser humano
+                        comum.
+                        Os super-heróis geralmente possuem superpoderes, como força sobre-humana, a habilidade de voar,
+                        super velocidade, visão de calor e outros. Os super-heróis existem em vários gêneros de
+                        entretenimento, como filmes, histórias em quadrinhos, seriados de televisão, desenhos animados,
+                        jogos eletrônicos e brinquedos.
+                    </p>
+                    <button class="button__overlay">Assista o Trailer</button>
+                </div>
+            </div>
         </section>
 
 
-        <section>
-            <h2>Últimos Lançamentos da Comics</h2>
-            <ul>
-                <li>Avengers: No Road Home #10</li>
-                <li>Black Panther #11</li>
-                <li>Champions #5</li>
-                <li>Deadpool #11</li>
-                <li>Doctor Strange #13</li>
-                <li>Guardians of the Galaxy #4</li>
-                <li>Immortal Hulk #16</li>
-                <li>Ironheart #5</li>
-                <li>Marvel Comics Presents #5</li>
-                <li>Marvel Rising #2</li>
-                <li>Marvel Team-Up #2</li>
-                <li>Miles Morales: Spider-Man #5</li>
-                <li>Old Man Quill #5</li>
-                <li>Runaways #20</li>
-                <li>Shuri #8</li>
-                <li>Spider-Man: Life Story #3</li>
+        <section class="comics__container">
+
+            <div class="comics__title">
+                <p>ULTIMOS LANCAMENTOS DA COMICS
+                </p>
+                <h3>MARVEL ILIMITADO</h3>
+            </div>
+
+
+            <ul class="list__container carrossel">
+                <li class="carrossel__item">
+                    <div class="comics__card ">
+                        <img src="./assets/images/c.png" alt="">
+                    </div>
+                    <p>Captain Carter (2022) #1</p>
+                </li>
+                <li class="carrossel__item">
+                    <div class="comics__card   ">
+                        <img src="./assets/images/b.png" alt="">
+                    </div>
+                    <p>Devil's Reign (2021) #5</p>
+                </li>
+                <li class="carrossel__item">
+                    <div class="comics__card ">
+                        <img src="./assets/images/avengers.png" alt="">
+                    </div>
+                    <p>Avengers (2018) #54</p>
+                </li>
+                <li class="carrossel__item">
+                    <div class="comics__card ">
+                        <img src="./assets/images/spider.png" alt="">
+                    </div>
+                    <p>The Amazing Spider-Man(2018) #92.1</p>
+                </li>
+                <li class="carrossel__item">
+                    <div class="comics__card ">
+                        <img src="./assets/images/spiderGwen.png" alt="">
+                    </div>
+                    <p>Spider-Gwen: Gwenverse(2022) #1</p>
+                </li>
+                <li class="carrossel__item">
+                    <div class="comics__card ">
+                        <img src="./assets/images/sabretooth.png" alt="">
+                    </div>
+                    <p>Sabretooth(2022) #2</p>
+                </li>
+                <li class="carrossel__item">
+                    <div class="comics__card ">
+                        <img src="./assets/images/women.png" alt="">
+                    </div>
+                    <p>Women of Marvel(2021) #1</p>
+                </li>
             </ul>
         </section>
 
+        <section class="container__rewards">
+            <div class="container__rewards">
+                <h3 class="title__rewards">Recompensas para games</h3>
+                <img src="./assets/images/image 6.png" alt="" class="logo__rewards">
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="894" height="667" viewBox="0 0 894 667" fill="none">
+                    <path d="M0 0H894L654 667H0V0Z" fill="black" />
+                </svg>
+                <img src="./assets/images/image 7.png" alt="" class="logo__heroes">
+            </div>
+            <p class="paragraph__rewards"> Seja Recompensado por fazer o que voce faz como fã da marvel</p>
+        </section>
         <section>
-            <div>
-                <h3>Recompensas</h3>
-                <div>
-                    <img src="" alt="insiderMarvel">
+            <div class="artist__container">
+                <div class="dev__container">
+                    <div class="title__container">
+                        <p>Artistas</p>
+                        <h3>Desenvolvedores do projeto</h3>
+                    </div>
+                    <div>
+                        <button class="dev__button">explore</button>
+                    </div>
                 </div>
 
-                <p> Seja Recompensado por fazer o que voce faz como fã da marvel</p>
-            </div>
+                <div class="person__container">
+                    <div class="artist__card">
+                        <img src="./assets/images/Rectangle 158.png" alt="">
+                        <p>Stan Lee</p>
+                    </div>
 
-            <div>
-                <p>Artistas</p>
+                    <div class="artist__card">
+                        <img src="./assets/images/Rectangle 158.png" alt="">
+                        <p>Stan Lee</p>
+                    </div>
 
+                    <div class="artist__card">
+                        <img src="./assets/images/Rectangle 158.png" alt="">
+                        <p>Stan Lee</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer>
-            <div>
-                <img src="" alt="Marvel">
-            </div>
 
-            <div>
-                <nav>
-                    <a href="#">Termos de uso</a> |
-                    <a href="#">MarvelHQ.com</a>
-                </nav>
-            </div>
-            <div>
-                <h3>Siga a gente</h3>
-                <p>
-                    <a href="#">Facebook</a> |
-                    <a href="#">Twitter</a> |
-                    <a href="#">Instagram</a>
-                </p>
-            </div>
-        </footer>
     </main>
+    <footer>
+        <div>
+            <svg width="180" height="44" viewBox="0 0 67 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector"
+                    d="M67 19.6685V23.9809H58.9735V0H63.2959V19.6685H67ZM32.7035 11.7595C32.3691 11.9198 32.0194 11.9995 31.6784 12.0005V4.28782H31.7003C32.0413 4.28509 34.5859 4.38818 34.5859 8.10218C34.5859 10.0435 33.7198 11.268 32.7035 11.7595ZM20.0361 16.4945L21.2328 6.24055L22.4744 16.4945H20.0361ZM58.2198 4.37727V0.00381817H45.981L43.9665 14.6105L41.9765 0.00327275H37.5626L38.0565 3.90327C37.5478 2.904 35.741 0.00327275 31.7634 0.00327275C31.7376 0.00218184 27.345 0.00327275 27.345 0.00327275L27.328 21.2935L24.1113 0.00381817L18.3307 0.00109083L15.0021 22.0593L15.0032 0.00381817H9.4715L7.47721 12.3949L5.53445 0.00327275H0V23.9847H4.35805V12.4255L6.34138 23.9847H8.658L10.6123 12.4255V23.9847H19.0143L19.523 20.2964H22.9053L23.4134 23.9847L31.6619 23.9891H31.6674V23.9847H31.6784V16.2011L32.6898 16.0538L34.7822 23.9902H39.0493L39.0482 23.9847H39.0602L36.3133 14.6858C37.7046 13.6604 39.2767 11.0618 38.8585 8.57509V8.574C38.8629 8.60564 41.4508 24 41.4508 24L46.5248 23.9853L49.9932 2.24891V23.9853H58.2198V19.6718H54.3145V14.1736H58.2198V9.79364H54.3145V4.37673L58.2198 4.37727Z"
+                    fill="white" />
+            </svg>
+        </div>
 
+        <div>
+            <nav class="nav__container">
+                <a href="#">SOBRE A MARVEL</a>
+                <a href="#">AJUDA</a>
+                <a href="#">CARREIRAS</a>
+                <a href="#">PAGINA DOS FAS</a>
+            </nav>
+        </div>
 
+        <div class="social__container">
+            <h3>SIGA A GENTE</h3>
+            <nav>
+                <a href="#">
+                    <img src="./assets/images/face.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="./assets/images/twiter.png" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="./assets/images/insta.png" alt="">
+                </a>
+            </nav>
+        </div>
+    </footer>
+
+    S
 
 </body>
 
