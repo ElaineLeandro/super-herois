@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 :root{
-    --gray-100: #f8f9fa;
-    --gray-300: #e3e3e3;
+    --withe-:#FFFFFF;
     --gray-500: #bdbdbd;
-    --gray-800: #3d3d3d;
-    --gray-900: #262626;
-    --gray-text-color: #838383;
-    --logo-color: #111;
+    --bg-hearder:#000000;
+    --bg-footer:#000000;
+    --nav-hover:  rgb(255, 10, 18);
+    
 }
 
 body{
@@ -18,22 +19,20 @@ body{
 }
 
 .container{
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-   
 }
 
 .container-header{
-    background-color: var(--gray-800);
+    background-color: var(--bg-hearder);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding-top: 10px;
    
 }
 
@@ -53,8 +52,9 @@ body{
     display: flex;
     align-items: center;    
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     border-top: 1px solid var(--gray-500);
+    padding-bottom: 10px;
 }
 .container-nav > nav > ul{
     list-style-type: none;
@@ -68,11 +68,11 @@ body{
 
 .container-nav > nav > ul > li > a {
     text-decoration: none;
-    color: var(--gray-100);
+    color: var(--withe-);
 }
 
 .container-nav > nav > ul > li > a:hover {
-    color: #FF5733; /* Altere a cor desejada para o hover */
+    color: var(--nav-hover)
 }
   
 .container-context{
@@ -82,7 +82,7 @@ body{
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background-color: var(--gray-300);
+    background-color: var(--withe-);
     padding: 20px;
 }
 
@@ -93,6 +93,11 @@ body{
 
 .image > img{
     max-width: 100%; 
+}
+
+.container-text{
+    background-color: #FF5733;
+    width: 100%;
 }
 
 
@@ -117,7 +122,7 @@ body{
 @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(-20px);
+      transform: translateY(-100px);
     }
     to {
       opacity: 1;
@@ -126,13 +131,13 @@ body{
   }
   
   .image > img {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 5s ease-in-out;
   }
   
   @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateX(-20px);
+      transform: translateX(-100px);
     }
     to {
       opacity: 1;
@@ -142,17 +147,17 @@ body{
   
   .container-description > h1,
   .container-description > p {
-    animation: slideIn 1s ease-in-out;
+    animation: slideIn 5s ease-in-out;
   }
   
 
 .container-footer{
-    background-color: var(--gray-800);
+    background-color: var(--bg-footer);
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--gray-100);
+    color: var(--withe-);
 }
 
 .footer-paragraph{
