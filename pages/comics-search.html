@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/comics-search.css">
     <title>Revista</title>
 </head>
 <body>
     <div class="conatiner">
-        <header>
-            <img class="logo" src="logo.png" alt="Logo">
-            <h1>Página de pesquisa de quadrinhos</h1>
-            <nav>
+        <header class="container-header">
+            <div class="container-image">
+              <img src="../assets/images/logoPadrao.jpeg" alt="Logo Marvel" />
+            </div>
+            <div class="container-nav">
+              <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Revista</a></li>
-                    <li><a href="#">Personagens</a></li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Comics</a></li>
+                  <li><a href="#">Herois</a></li>
                 </ul>
-            </nav>
-
-        </header>
+              </nav>
+            </div>
+          </header>
         <main class="context">
+
             <h1>Revista</h1>
+            <div>
 
             <div class="comic-card">
                 <img src="comic1.jpg" alt="Comic 1">
@@ -105,6 +112,7 @@
                 <h2>Revista Titúlo 14</h2>
                 <p class="comic-description">Homem-Aranha </p>
             </div>
+        </div>
 
             <div class="btn">
                 <button type="button">Carregando</button>
@@ -112,18 +120,20 @@
 
         </main>
 
-        <footer>
-            <div>
-                <p>Siga a Marvel nas redes sociais:</p>
-                <ul>
-                    <li><a href="https://www.facebook.com/Marvel" target="_blank"></a>Facebook</li>
-                    <li><a href="https://www.instagram.com/marvel" target="_blank"></a>Instagram</li>
-                </ul>
-
+        <footer class="container-footer">
+            <p class="footer-paragraph">Siga a Marvel nas redes sociais:</p>
+            <div class="footer-icons">
+              <a href="https://www.facebook.com/Marvel" target="_blank"
+                ><img src="../assets/icons/facebook-icon.png" alt="" 
+              /></a>
+              <a href="https://twitter.com/MarvelBR" target="_blank"
+                ><img src="../assets/icons/twitter-icon.png" alt="" 
+              /></a>
+              <a href="https://www.instagram.com/marvel" target="_blank"
+                ><img src="../assets/icons/instagram-icon.png" alt="" 
+              /></a>
             </div>
-           
-
-        </footer>
+          </footer>
     </div>
     
 </body>
