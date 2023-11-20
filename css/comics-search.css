@@ -150,7 +150,7 @@ body{
 }
 
 .comic-item {
-   /* margin: 5px; */
+   margin: 5px;
    padding: 10px;
    width: min-content;
    
