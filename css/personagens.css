@@ -35,6 +35,27 @@ body{
    
 }
 
+.container-text{
+  display: flex;
+  padding: 0 140px 0 140px;
+}
+
+.container-text > input{
+  width: max-content;
+  border: none;
+  height: auto;
+  background-color: var(--white-);
+  border-bottom: 2px solid black;
+  font-size: 1rem;
+}
+
+.container-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem ;
+}
+
 .container-image{
     width: 100%;
     display: flex;
