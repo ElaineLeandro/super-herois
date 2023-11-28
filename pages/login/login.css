@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('assets/marvel-background.jpeg') no-repeat center center fixed;
+    background: url('../../assets/images/marvel-background.jpeg') no-repeat center center fixed;
     background-size: cover;
 }
 
