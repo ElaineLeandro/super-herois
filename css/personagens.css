@@ -147,6 +147,10 @@ body{
     font-family: 'Bebas Neue', sans-serif;
 }
 
+button:hover {
+  background-color: #cc0000;
+}
+
 footer{
   background-color: var(--gray-800);
   height: auto;
