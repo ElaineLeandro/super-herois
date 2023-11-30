@@ -96,7 +96,7 @@ body{
 }
 
 .container-text{
-    background-color: #FF5733;
+    background-color: var(--nav-hover);
     width: 100%;
 }
 
@@ -157,6 +157,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: var(--white-);
 }
 
 .image_footer{
@@ -170,18 +171,17 @@ body{
     gap: 15px;
 }
 
-.nav_footer a{
-    color: var(--white-);
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
+.nav_footer  a{
     font-size: 18px;
     font-weight: 700;
     line-height: 150%;
+    text-decoration: none;
+    color: var(--white-)
+    
 }
 
 .footer-subtitle{
     color: var(--white-);
-    font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-style: normal;
     margin-bottom: 69px;
@@ -205,7 +205,7 @@ body{
 }
 
 .footer-nav-icons a:hover {
-    color: #ff0000;
+    color: var(--nav-hover);
   }
 
 
