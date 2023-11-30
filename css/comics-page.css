@@ -150,14 +150,12 @@ body{
     animation: slideIn 5s ease-in-out;
   }
   
-
   .container-footer{
     background-color: var(--bg-footer);
     height: 324px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: var(--white-);
 }
 
 .image_footer{
@@ -171,13 +169,12 @@ body{
     gap: 15px;
 }
 
-.nav_footer  a{
+.nav_footer a{
+    color: var(--white-);
+    text-decoration: none;
     font-size: 18px;
     font-weight: 700;
     line-height: 150%;
-    text-decoration: none;
-    color: var(--white-);
-    
 }
 
 .footer-subtitle{
@@ -209,10 +206,11 @@ body{
   }
 
 
-
 .footer-nav-icons a:hover img {
     filter: brightness(50%);
   }
+
+
 
 
 
