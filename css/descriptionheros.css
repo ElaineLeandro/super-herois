@@ -5,18 +5,11 @@
   }
   
   :root{
-    --white-:fff;
-    --gray-100: #f8f9fa;
-    --gray-200: #f0f0f0;
-    --gray-300: #e3e3e3;
-    --gray-400: #d8d8d8;
-    --gray-500: #bdbdbd;
-    --gray-600: #7e7e7e;
-    --gray-700: #565656;
-    --gray-800: #3d3d3d;
-    --gray-900: #262626;
-    --gray-text-color: #838383;
-    --logo-color: #111;
+    --withe-:#FFFFFF;
+      --gray-500: #bdbdbd;
+      --bg-hearder:#000000;
+      --bg-footer:#000000;
+      --nav-hover:  rgb(255, 10, 18);
   }
   
   
@@ -26,7 +19,7 @@
   }
   
     .container-header{
-      background-color: var(--gray-800);
+      background-color: var(--bg-hearder);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -65,7 +58,7 @@
 
 .container-nav > nav > ul > li > a {
     text-decoration: none;
-    color: var(--gray-100);
+    color: var(--withe-);
 }
 
 .container-nav > nav > ul > li > a:hover {
@@ -117,7 +110,7 @@
   }
   
   .image > img {
-    animation: fadeIn 5s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
   }
   
   @keyframes slideIn {
@@ -133,29 +126,16 @@
   
   .container-description > h1,
   .container-description > p {
-    animation: slideIn 5s ease-in-out;
+    animation: slideIn 0.6s ease-in-out;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer{
-    background-color: var(--gray-800);
+    background-color: var(--bg-footer);
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--gray-100);
+    color: var(--withe-);
   }
   
   .footer-paragraph{
