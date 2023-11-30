@@ -169,16 +169,20 @@ body{
     gap: 15px;
 }
 
-.nav_footer a{
-    color: var(--white-);
+.nav_footer > a{
+    color: var(--withe-);
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
     line-height: 150%;
 }
 
+.nav_footer > a:houver{
+    color: var(--nav-hover);
+}
+
 .footer-subtitle{
-    color: var(--white-);
+    color: var(--withe-);
     font-size: 18px;
     font-style: normal;
     margin-bottom: 69px;
