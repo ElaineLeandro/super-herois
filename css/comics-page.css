@@ -208,9 +208,7 @@ body{
     color: #ff0000;
   }
 
-/* .footer-nav-icons a > img{
-    width: 100%;
-}  */
+
 
 .footer-nav-icons a:hover img {
     filter: brightness(50%);
