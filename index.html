@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Super-Herois, Marvel, Login">
     <meta name="description" content="Página de login para o site de Super-Herois da Marvel">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Super-Herois</title>
@@ -15,27 +18,39 @@
 
 <body>
     <!-- Início do Cabeçalho -->
-    <header class="cabecalho">
-        <div class="logo">
-            <img src="./assets/images/Vector.png" alt="Logo Marvel">
-            <h2>LOGIN</h2>
-        </div>
 
-        <div class="cabecalho__logo">
-            <img src="./assets/images/logo.png" alt="logo">
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  cabecalho">
+        <div class="d-flex justify-content-between w-100">
+            <div class="logo">
+                <img src="./assets/images/Vector.png" alt="Logo Marvel">
+                <h2>LOGIN</h2>
+            </div>
 
-        <!-- Início da Navegação -->
-        <nav>
-            <ul class="menu__lista">
-                <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
-                <li class="menu__item"><a class="menu__link" href="./pages/personagens/personagens.html">Herois</a></li>
-                <li class="menu__item"><a class="menu__link" href="./pages/comics-search.html">Comics</a></li>
-            </ul>
-        </nav>
-        <!-- Fim da Navegação -->
-    </header>
-    <!-- Fim do Cabeçalho -->
+            <div class="cabecalho__logo">
+                <img src="./assets/images/logo.png" alt="logo">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto menu__lista">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/personagens/personagens.html">Herois</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/comics/comics-search.html">Comics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
 
     <!-- Início do Conteúdo Principal -->
     <main>
