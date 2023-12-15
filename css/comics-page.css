@@ -216,6 +216,48 @@ body{
   }
 
 
+@media only screen and (max-width: 768px) {
+    .container-context{
+        height: 80vh;
+        
+    }
+    .image{
+        display: none;
+    }
+    .container-description h1{
+        font-size: 
+    }
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+        padding: 30px;
+    }
 
+    .image_footer {
+        padding-top: 30px;
+    }
 
+    svg {
+        width: 80px;
+        height: 40px;
+    }
+
+    .nav_footer {
+        margin-top: 20px; 
+
+    .footer-social-icons {
+        margin-top: 20px; 
+
+    .footer-nav-icons {
+        display: flex;
+        justify-content: center; 
+
+    .footer-subtitle {
+        margin-bottom: 10px; 
+    }
+
+  }
+  
 
