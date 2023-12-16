@@ -279,6 +279,12 @@ body {
   background: #ededed;
 }
 
+.person__container {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+
 @media screen and (min-width: 480px) {
   .background__page {
     height: 100%;
@@ -313,7 +319,6 @@ body {
   .person__container {
     display: flex;
     flex-direction: column;
-    gap: 10px !important;
   }
 
   footer {
@@ -333,6 +338,12 @@ body {
     background-color: #000;
   }
 
+  .person__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px !important;
+  }
+
   .logo__rewards {
     margin: 0 auto;
     position: absolute;
@@ -347,6 +358,21 @@ body {
     align-items: center;
     width: 100%;
     margin-left: 339px !important;
+  }
+
+  .person__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px !important;
+  }
+
+  footer {
+    background-color: black;
+    height: 324px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -416,11 +442,6 @@ body {
   height: 99.4%;
 }
 
-.artists__container {
-  display: flex;
-  margin-top: 100px;
-}
-
 .dev__container {
   display: flex;
   justify-content: space-around;
@@ -435,13 +456,6 @@ body {
   border: none;
   color: white;
   margin-left: 80px;
-}
-
-.person__container {
-  margin-top: 150px;
-  display: flex;
-  justify-content: center;
-  gap: 307px;
 }
 
 .photo {
