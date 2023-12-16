@@ -19,63 +19,46 @@
 <body>
     <!-- Início do Cabeçalho -->
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light  cabecalho">
-        <div class="d-flex justify-content-between w-100">
-            <div class="logo">
-                <img src="./assets/images/Vector.png" alt="Logo Marvel">
-                <h2>LOGIN</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light cabecalho ">
+        <div class="container-fluid ">
+            <!-- Botão de menu -->
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <div class="cabecalho__logo">
-                <img src="./assets/images/logo.png" alt="logo">
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto menu__lista">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/personagens/personagens.html">Herois</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/comics/comics-search.html">Comics</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
 
+            <!-- Logo -->
+            <div class="mx-auto container__logo">
+                <div class="cabecalho__logo">
+                    <img src="./assets/images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <!-- Links -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Marvel Menu</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 menu__lista">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Herois</a>
+                            <a class="nav-link" href="./pages/personagens/personagens.html">Herois</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Comics</a>
+                            <a class="nav-link" href="./pages/comics/comics-search.html">Comics</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
     </nav>
 
     <!-- Início do Conteúdo Principal -->

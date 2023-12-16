@@ -323,6 +323,33 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .container__rewards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #000;
+  }
+
+  .logo__rewards {
+    margin: 0 auto;
+    position: absolute;
+    left: 26px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 339px !important;
+  }
+}
+
 .comics__card {
   width: 200px;
   height: 300px;
