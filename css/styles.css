@@ -291,6 +291,35 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0 0;
+  }
+
+  .container__rewards {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .title__rewards {
+    margin: 0 auto;
+  }
+
+  .logo__rewards {
+    position: absolute;
+    left: 80px !important;
+  }
+
+  .person__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 50% !important;
   }
 }
 
