@@ -321,6 +321,7 @@ body {
     flex-direction: column;
   }
 
+
   footer {
     display: flex;
     flex-direction: column;
@@ -376,6 +377,11 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .container__rewards svg {
+    width: 894px;
+    height: 667px;
   }
 }
 
