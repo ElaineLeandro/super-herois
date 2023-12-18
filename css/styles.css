@@ -285,7 +285,7 @@ body {
   justify-content: space-around;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 468px) {
   .background__page {
     height: 100%;
     width: 100%;
@@ -335,7 +335,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    background-color: #000;
   }
 
   .person__container {
@@ -366,6 +365,10 @@ body {
     gap: 10px !important;
   }
 
+  .container__rewards {
+    align-items: baseline !important;
+  }
+
   footer {
     background-color: black;
     height: 324px;
@@ -392,10 +395,8 @@ body {
 }
 
 .comics__card:hover {
-  -webkit-animation: shadow-drop-2-center 0.6s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
-    both;
+  -webkit-animation: shadow-drop-2-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .container__rewards {
