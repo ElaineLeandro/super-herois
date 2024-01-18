@@ -140,7 +140,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.5rem ;
+    font-size: 1.5rem;
+    padding: 0 140px 0 140px;
+    margin-top: 50px;
+    margin-bottom: 0;
 }
 .container-context-list{
     display: flex;
