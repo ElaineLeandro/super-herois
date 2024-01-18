@@ -1,6 +1,9 @@
 // comicsSearch.js
 import { fetchSuperheroes } from './api.js';
 
+let charactersPerPage = 1; 
+let currentPosition = 0;    
+
 // Função para criar elementos HTML com as informações do super-herói
 function createComicItem(superhero) {
     const comicItem = document.createElement('div');
@@ -25,14 +28,17 @@ function createComicItem(superhero) {
 }
 
 // Função para adicionar os elementos à página
+
 function displaySuperheroes(superheroes) {
     const containerContextList = document.querySelector('.container-context-list');
-    containerContextList.innerHTML = '';
+    const endPosition = currentPosition + charactersPerPage;
 
-    superheroes.forEach(superhero => {
+    superheroes.slice(currentPosition, endPosition).forEach(superhero => {
         const comicItem = createComicItem(superhero);
         containerContextList.appendChild(comicItem);
     });
+
+    currentPosition = endPosition;
 }
 
 // Função para buscar e exibir informações ao clicar no botão
@@ -51,11 +57,12 @@ document.getElementById('btn-loading').addEventListener('click', function () {
 });
 
 // Mecanismo de busca
+
 document.getElementById('search-input').addEventListener('input', function () {
     const searchTerm = this.value.toLowerCase();
-    const allComicItems = document.querySelectorAll('.comic-item');
+    const visibleComicItems = document.querySelectorAll('.comic-item:visible');
 
-    allComicItems.forEach(comicItem => {
+    visibleComicItems.forEach(comicItem => {
         const superheroName = comicItem.querySelector('h2').textContent.toLowerCase();
         const comicDescription = comicItem.querySelector('.comic-description').textContent.toLowerCase();
 
