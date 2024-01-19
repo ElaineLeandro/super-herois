@@ -1,6 +1,10 @@
 // comicsSearch.js
 import { getAllSuperHeroes } from './api.js';
 
+let charactersPerPage = 1;
+let currentPosition = 0;
+let allSuperHeroes = []
+
 // Função para criar elementos HTML com as informações do super-herói
 function createComicItem (superhero) {
     const comicItem = document.createElement('div');
@@ -25,45 +29,78 @@ function createComicItem (superhero) {
 }
 
 // Função para adicionar os elementos à página
+
 function displaySuperheroes (superheroes) {
     const containerContextList = document.querySelector('.container-context-list');
-    containerContextList.innerHTML = '';
+    const endPosition = currentPosition + charactersPerPage;
 
     superheroes.forEach(superhero => {
         const comicItem = createComicItem(superhero);
         containerContextList.appendChild(comicItem);
     });
+
+    currentPosition = endPosition;
 }
 
-// Função para buscar e exibir informações ao clicar no botão
-// document.getElementById('btn-loading').addEventListener('click', function () {
-//     alert('Aguarde por favor, enquanto o conteúdo está sendo carregado.');
 
 // Chama a função de busca na API
 getAllSuperHeroes()
     .then(superheroes => {
+        allSuperHeroes = superheroes; // Adicione esta linha
         // Exibe as informações dos super-heróis na página
         displaySuperheroes(superheroes);
     })
     .catch(error => {
         console.error('Erro durante o carregamento:', error);
     });
-// });
+
 
 // Mecanismo de busca
+
+// document.getElementById('search-input').addEventListener('input', function () {
+//     const searchTerm = this.value.toLowerCase();
+//     const visibleComicItems = document.querySelectorAll('.comic-item');
+//     console.log(visibleComicItems);
+
+//     visibleComicItems.forEach(comicItem => {
+//         const superheroElement = comicItem.querySelector('h2');
+//         const descriptionElement = comicItem.querySelector('.comic-description');
+
+//         const superheroName = superheroElement ? superheroElement.textContent.toLowerCase() : '';
+//         const comicDescription = descriptionElement ? descriptionElement.textContent.toLowerCase() : '';
+
+//         comicItem.style.display = ((superheroName && superheroName.includes(searchTerm)) || (comicDescription && comicDescription.includes(searchTerm))) ? 'block' : 'none';
+//     });
+// });
+
 document.getElementById('search-input').addEventListener('input', function () {
     const searchTerm = this.value.toLowerCase();
-    const allComicItems = document.querySelectorAll('.comic-item');
-
-    allComicItems.forEach(comicItem => {
-        const superheroName = comicItem.querySelector('h2').textContent.toLowerCase();
-        const comicDescription = comicItem.querySelector('.comic-description').textContent.toLowerCase();
-
-        // if (superheroName.includes(searchTerm) || comicDescription.includes(searchTerm)) {
-        //     comicItem.style.display = 'block';
-        // } else {
-        //     comicItem.style.display = 'none';
-        // }
-        comicItem.style.display = (superheroName.includes(searchTerm) || comicDescription.includes(searchTerm)) ? 'block' : 'none';
+    const filteredSuperheroes = allSuperHeroes.filter(superhero => {
+        const superheroName = superhero.name.toLowerCase();
+        return superheroName.includes(searchTerm);
     });
+    clearSuperheroes();
+    displaySuperheroes(filteredSuperheroes);
 });
+
+let currentPage = 1;
+const nextPageButton = document.getElementById('nextPage');
+
+
+nextPageButton.addEventListener('click', () => {
+    currentPage++;
+    getAllSuperHeroes(currentPage)
+        .then(data => {
+            allSuperHeroes = allSuperHeroes.concat(data); // Adicione esta linha
+            clearSuperheroes(); // Função para limpar os super-heróis existentes
+            displaySuperheroes(data);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+});
+
+function clearSuperheroes () {
+    const superheroesContainer = document.querySelector('.container-context-list');
+    superheroesContainer.innerHTML = '';
+}

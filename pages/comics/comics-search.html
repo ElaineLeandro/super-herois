@@ -74,25 +74,30 @@
                         </form>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="container-text">
-                <h1>COMICS</h1>
-                <input type="text" id="search-input" placeholder="Search">
-            </div>
-
-            <div class="container-context-list">
-
-                <div class="comic-item shadow-drop-2-center">
-
+                <div class="container-text">
+                    <div class="container-tatle">
+                        <h1>COMICS</h1>
+                    </div>
+                    <input type="text" id="search-input" placeholder="Search">
                 </div>
 
-                <!-- <div class="btn_status">
-                    <button type="button" class="btn btn-danger" id="btn-loading">Carregue mais</button>
-                </div> -->
-            </div>
+                <div class="container-context-list">
+
+                    <div class="comic-item shadow-drop-2-center">
+
+                    </div>
+
+                    <!-- <div class="btn_status">
+                        <button type="button" class="btn btn-danger " id="btn-loading">Carregue mais</button>
+                    </div> -->
         </main>
+
+        <div class="pagination">
+            <button id="previousPage">Página Anterior</button>
+            <button id="nextPage">Próxima Página</button>
+        </div>
 
         <footer class="container-footer">
             <div class="image_footer">
@@ -131,6 +136,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="../../js/comicsSearch.js"></script>
+    <!-- <script type="module" src="../../js/domManipulation.js"></script> -->
 </body>
 
 </html>
