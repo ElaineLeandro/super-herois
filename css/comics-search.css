@@ -185,6 +185,7 @@ body {
   height: 60px;
 }
 
+<<<<<<< HEAD
 .pagination {
   align-items: center;
   text-align: center;
@@ -228,6 +229,50 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+=======
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 1em;
+    flex-flow: row;
+
+}
+
+
+#previousPage {
+    padding: 10px 20px;
+    background-color: #ed1d24;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  #previousPage:hover {
+    background-color: #cc0000;
+  }
+#nextPage {
+    padding: 10px 20px;
+    background-color: #ed1d24;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  #nextPage:hover {
+    background-color: #cc0000;
+  }
+
+.nav_footer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--bg-footer);
+>>>>>>> e0c7a99fae2cafb20b1a0ffc1ef0f6c908f9a5d3
 }
 
 .nav_footer a {
@@ -293,6 +338,7 @@ body {
     width: 80%; /* Ajuste conforme necessário */
   }
 
+<<<<<<< HEAD
   .pagination {
     display: flex;
     flex-direction: column;
@@ -309,6 +355,15 @@ body {
     text-align: center;
     padding: 30px;
   }
+=======
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+>>>>>>> e0c7a99fae2cafb20b1a0ffc1ef0f6c908f9a5d3
 
   .image_footer {
     padding-top: 30px;
@@ -328,7 +383,14 @@ body {
     justify-content: center;
   }
 
+<<<<<<< HEAD
   .footer-subtitle {
     margin-bottom: 10px;
   }
 }
+=======
+    .footer-subtitle {
+        margin-bottom: 10px;
+    }
+}
+>>>>>>> e0c7a99fae2cafb20b1a0ffc1ef0f6c908f9a5d3
