@@ -25,8 +25,26 @@ function createComicItem (superhero) {
     comicItem.appendChild(h2);
     comicItem.appendChild(p);
 
+    comicItem.addEventListener('click', () => {
+        getHeroDetails(superhero.id)
+            .then(details => {
+                // Display the details in your UI
+                console.log(details);
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    });
+
+    comicItem.addEventListener('click', () => {
+        window.location.href = `comics-page.html?id=${superhero.id}`;
+    });
+
     return comicItem;
 }
+
+
+
 
 // Função para adicionar os elementos à página
 
@@ -46,7 +64,7 @@ function displaySuperheroes (superheroes) {
 // Chama a função de busca na API
 getAllSuperHeroes()
     .then(superheroes => {
-        allSuperHeroes = superheroes; // Adicione esta linha
+        allSuperHeroes = superheroes;
         // Exibe as informações dos super-heróis na página
         displaySuperheroes(superheroes);
     })
@@ -57,21 +75,6 @@ getAllSuperHeroes()
 
 // Mecanismo de busca
 
-// document.getElementById('search-input').addEventListener('input', function () {
-//     const searchTerm = this.value.toLowerCase();
-//     const visibleComicItems = document.querySelectorAll('.comic-item');
-//     console.log(visibleComicItems);
-
-//     visibleComicItems.forEach(comicItem => {
-//         const superheroElement = comicItem.querySelector('h2');
-//         const descriptionElement = comicItem.querySelector('.comic-description');
-
-//         const superheroName = superheroElement ? superheroElement.textContent.toLowerCase() : '';
-//         const comicDescription = descriptionElement ? descriptionElement.textContent.toLowerCase() : '';
-
-//         comicItem.style.display = ((superheroName && superheroName.includes(searchTerm)) || (comicDescription && comicDescription.includes(searchTerm))) ? 'block' : 'none';
-//     });
-// });
 
 document.getElementById('search-input').addEventListener('input', function () {
     const searchTerm = this.value.toLowerCase();
@@ -85,13 +88,18 @@ document.getElementById('search-input').addEventListener('input', function () {
 
 let currentPage = 1;
 const nextPageButton = document.getElementById('nextPage');
+const previousPageButton = document.getElementById('previousPage');
 
 
 nextPageButton.addEventListener('click', () => {
     currentPage++;
     getAllSuperHeroes(currentPage)
         .then(data => {
-            allSuperHeroes = allSuperHeroes.concat(data); // Adicione esta linha
+            data.forEach(hero => {
+                if (!allSuperHeroes.find(h => h.id === hero.id)) {
+                    allSuperHeroes.push(hero);
+                }
+            });
             clearSuperheroes(); // Função para limpar os super-heróis existentes
             displaySuperheroes(data);
         })
@@ -100,7 +108,27 @@ nextPageButton.addEventListener('click', () => {
         });
 });
 
+previousPageButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        getAllSuperHeroes(currentPage)
+            .then(data => {
+                data.forEach(hero => {
+                    if (!allSuperHeroes.find(h => h.id === hero.id)) {
+                        allSuperHeroes.push(hero);
+                    }
+                });
+                clearSuperheroes();
+                displaySuperheroes(data);
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    }
+});
+
 function clearSuperheroes () {
     const superheroesContainer = document.querySelector('.container-context-list');
     superheroesContainer.innerHTML = '';
 }
+
