@@ -295,3 +295,44 @@ body{
     }
 
 }
+
+.pagination{
+    display: flex;
+    flex-direction: ro;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#previousPage {
+  display: block;
+  margin: 20px ;
+  padding: 10px 20px;
+  background-color: #ed1d24;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+#previousPage:hover {
+    background-color: #cc0000;
+  }
+
+#nextPage{
+    display: block;
+    margin: 20px ;
+    padding: 10px 20px;
+    background-color: #ed1d24;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+
+#nextPage:hover {
+    background-color: #cc0000;
+  }

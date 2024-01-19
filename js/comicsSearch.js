@@ -85,6 +85,7 @@ document.getElementById('search-input').addEventListener('input', function () {
 
 let currentPage = 1;
 const nextPageButton = document.getElementById('nextPage');
+const previousPageButton = document.getElementById('previousPage');
 
 
 nextPageButton.addEventListener('click', () => {
@@ -99,6 +100,20 @@ nextPageButton.addEventListener('click', () => {
             console.error(err);
         });
 });
+
+previousPageButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        getAllSuperHeroes(currentPage)
+            .then(data => {
+                clearSuperheroes();
+                displaySuperheroes(data);
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    }
+}); 
 
 function clearSuperheroes () {
     const superheroesContainer = document.querySelector('.container-context-list');
