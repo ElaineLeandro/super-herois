@@ -11,11 +11,30 @@ getHeroDetails(id)
     // Cria e adiciona os elementos HTML para exibir os detalhes do super-herói
     const container = document.querySelector('.container1');
 
+    const containerContextList = document.querySelector('.container-context-list');
+
+    
 
     const backButton = document.createElement('button');
-    backButton.textContent = 'Voltar';
-    backButton.style.backgroundColor = 'blue'; // Adiciona um fundo azul
-    backButton.style.color = 'white'; // Adiciona uma cor de texto branca
+    backButton.style.backgroundColor = '#ed1d24'; // Cor de fundo
+    backButton.style.color = '#fff'; // Cor do texto
+    backButton.style.border = 'none'; // Sem borda
+    backButton.style.borderRadius = '30px'; // Raio da borda
+    backButton.style.cursor = 'pointer'; // Cursor do mouse
+    backButton.style.padding = '10px 20px'; // Padding
+    backButton.style.fontFamily = "'Bebas Neue', sans-serif"; // Fonte
+
+    // Adiciona estilo hover
+    backButton.addEventListener('mouseover', function() {
+    backButton.style.backgroundColor = '#cc0000'; // Cor de fundo no hover
+});
+
+// Remove estilo hover
+    backButton.addEventListener('mouseout', function() {
+    backButton.style.backgroundColor = '#ed1d24'; // Restaura a cor de fundo padrão
+});
+
+     
     backButton.addEventListener('click', () => {
       window.location.href = 'comics-search.html';
     });
@@ -23,12 +42,15 @@ getHeroDetails(id)
     // Limpa o contêiner
     container.innerHTML = '';
 
-    container.style.width = '350px';
-    container.style.height = '350px';
+    container.style.width = '100%';
+    container.style.height = 'auto';
+    
 
     const img = document.createElement('img');
     img.src = superhero.images.sm;
     img.alt = superhero.name;
+    img.style.width = '250px'
+    img.style.height = 'auto'
 
     const h2 = document.createElement('h2');
     h2.textContent = superhero.name;

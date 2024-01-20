@@ -76,15 +76,18 @@ body {
   color: var(--nav-hover);
 }
 
-.container-context {
+
+.container-context-list {
   display: flex;
   justify-content: space-around;
   gap: 50px;
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--withe-);
+  background-color: white;
   padding: 20px;
+  
+  
 }
 
 .image {
@@ -150,39 +153,35 @@ body {
   animation: slideIn 5s ease-in-out;
 }
 
-.container-footer {
-  background-color: var(--bg-footer);
+footer {
+  background-color: black;
   height: 324px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.image_footer {
+footer svg {
   width: 180px;
   height: 60px;
 }
 
-.nav_footer {
+.nav__container {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.nav_footer > a {
-  color: var(--withe-);
+.nav__container a {
+  color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: 700;
   line-height: 150%;
 }
 
-.nav_footer > a:houver {
-  color: var(--nav-hover);
-}
-
-.footer-subtitle {
-  color: var(--withe-);
+footer h3 {
+  color: white;
   font-size: 18px;
   font-style: normal;
   margin-bottom: 69px;
@@ -190,68 +189,79 @@ body {
   line-height: 150%;
 }
 
-.footer-social-icons nav {
+.social__container nav {
   display: flex;
   gap: 25px;
 }
 
-.footer-social-icons {
+.social__container {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.footer-nav-icons > a {
+.nav__container a {
   transition: all 0.3s ease;
 }
 
-.footer-nav-icons a:hover {
-  color: var(--nav-hover);
+.nav__container a:hover {
+  color: #ff0000;
 }
 
-.footer-nav-icons a:hover img {
+.social__container a:hover img {
   filter: brightness(50%);
 }
 
-footer {
-  margin-top: auto;
-}
+/* Restante do seu CSS permanece inalterado */
 
 @media only screen and (max-width: 768px) {
   .container-context {
-    height: 80vh;
+      padding-top: 25px;
   }
-  .image {
-    display: none;
+
+  .container-text {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px; /* Ajuste conforme necessário */
+  }
+
+  .container-context-list {
+      justify-content: center;
+      align-items: center;
+  }
+
+  .comic-item {
+      width: 80%; /* Ajuste conforme necessário */
   }
 
   .container-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
   }
 
   .image_footer {
-    padding-top: 30px;
+      padding-top: 30px;
   }
 
   svg {
-    width: 80px;
-    height: 40px;
+      width: 80px;
+      height: 40px;
   }
 
   .nav_footer {
-    margin-top: 20px;
+      margin-top: 20px;
   }
 
   .footer-nav-icons {
-    display: flex;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
   }
 
   .footer-subtitle {
-    margin-bottom: 10px;
+      margin-bottom: 10px;
   }
 }
