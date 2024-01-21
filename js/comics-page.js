@@ -13,7 +13,7 @@ getHeroDetails(id)
 
     const containerContextList = document.querySelector('.container-context-list');
 
-    
+
 
     const backButton = document.createElement('button');
     backButton.style.backgroundColor = '#ed1d24'; // Cor de fundo
@@ -25,16 +25,16 @@ getHeroDetails(id)
     backButton.style.fontFamily = "'Bebas Neue', sans-serif"; // Fonte
 
     // Adiciona estilo hover
-    backButton.addEventListener('mouseover', function() {
-    backButton.style.backgroundColor = '#cc0000'; // Cor de fundo no hover
-});
+    backButton.addEventListener('mouseover', function () {
+      backButton.style.backgroundColor = '#cc0000'; // Cor de fundo no hover
+    });
 
-// Remove estilo hover
-    backButton.addEventListener('mouseout', function() {
-    backButton.style.backgroundColor = '#ed1d24'; // Restaura a cor de fundo padrão
-});
+    // Remove estilo hover
+    backButton.addEventListener('mouseout', function () {
+      backButton.style.backgroundColor = '#ed1d24'; // Restaura a cor de fundo padrão
+    });
 
-     
+
     backButton.addEventListener('click', () => {
       window.location.href = 'comics-search.html';
     });
@@ -44,7 +44,11 @@ getHeroDetails(id)
 
     container.style.width = '100%';
     container.style.height = 'auto';
-    
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.alignItems = 'center';
+    container.style.justifyContent = 'center';
+
 
     const img = document.createElement('img');
     img.src = superhero.images.sm;
