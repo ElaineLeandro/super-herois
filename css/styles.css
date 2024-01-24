@@ -293,6 +293,14 @@ body {
     width: 100%;
   }
 
+  .container__rewards .logo__rewards {
+    width: 228px;
+  }
+
+  .container__rewards .paragraph__rewards {
+    display: none;
+  }
+
   .text__overlay {
     display: flex;
     flex-direction: column;
@@ -346,6 +354,10 @@ body {
     gap: 10px !important;
   }
 
+  .container__rewards .paragraph__rewards {
+    display: block;
+  }
+
   .logo__rewards {
     margin: 0 auto;
     position: absolute;
@@ -360,6 +372,16 @@ body {
     align-items: center;
     width: 100%;
     margin-left: 339px !important;
+  }
+
+  .container__rewards .logo__rewards {
+    width: 400px;
+    position: absolute;
+    right: 65% !important;
+  }
+
+  .container__rewards .paragraph__rewards {
+    display: block;
   }
 
   .person__container {
