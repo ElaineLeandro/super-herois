@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" />
     <!-- CDN da biblioteca do jquery-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
@@ -67,10 +68,10 @@
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3" role="search">
+                        <!-- <form class="d-flex mt-3" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-success" type="submit">Search</button>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
 
@@ -79,7 +80,10 @@
                     <div class="container-tatle">
                         <h1>Personagens</h1>
                     </div>
-                    <input type="text" id="search-input" placeholder="Pesquisa">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Pesquisa">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
                 </div>
 
                 <div class="container-context-list">
