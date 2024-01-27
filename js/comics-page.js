@@ -23,6 +23,7 @@ getHeroDetails(id)
     backButton.style.cursor = 'pointer'; // Cursor do mouse
     backButton.style.padding = '10px 20px'; // Padding
     backButton.style.fontFamily = "'Bebas Neue', sans-serif"; // Fonte
+    backButton.style.margin = "2em"; // Fonte
 
     // Adiciona estilo hover
     backButton.addEventListener('mouseover', function () {
@@ -55,9 +56,12 @@ getHeroDetails(id)
     img.alt = superhero.name;
     img.style.width = '250px'
     img.style.height = 'auto'
+    img.style.margin = '2em'
 
     const h2 = document.createElement('h2');
     h2.textContent = superhero.name;
+    h2.style.fontFamily = 'Bebas Neue';
+    h2.style.fontWeight = 'bold'; 
 
     container.appendChild(img);
     container.appendChild(h2);
@@ -65,6 +69,8 @@ getHeroDetails(id)
     // Itera sobre as chaves do objeto biography
     for (let key in superhero.biography) {
       const p = document.createElement('p');
+      p.style.fontFamily = 'Bebas Neue'; 
+      p.style.margin = '0';              
       p.textContent = `${key}: ${superhero.biography[key]}`;
       container.appendChild(p);
     }
