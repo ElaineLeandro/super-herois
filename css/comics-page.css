@@ -76,7 +76,6 @@ body {
   color: var(--nav-hover);
 }
 
-
 .container-context-list {
   display: flex;
   justify-content: space-around;
@@ -86,8 +85,13 @@ body {
   min-height: 100vh;
   background-color: white;
   padding: 20px;
-  
-  
+  color: var(--withe-);
+  background-image: url("../assets/images/wallhaven3.jpg");
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .image {
@@ -216,52 +220,52 @@ footer h3 {
 
 @media only screen and (max-width: 768px) {
   .container-context {
-      padding-top: 25px;
+    padding-top: 25px;
   }
 
   .container-text {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 20px; /* Ajuste conforme necessário */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
   }
 
   .container-context-list {
-      justify-content: center;
-      align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .comic-item {
-      width: 80%; /* Ajuste conforme necessário */
+    width: 80%; /* Ajuste conforme necessário */
   }
 
   .container-footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
   }
 
   .image_footer {
-      padding-top: 30px;
+    padding-top: 30px;
   }
 
   svg {
-      width: 80px;
-      height: 40px;
+    width: 80px;
+    height: 40px;
   }
 
   .nav_footer {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 
   .footer-nav-icons {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 
   .footer-subtitle {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 }

@@ -61,7 +61,7 @@ getHeroDetails(id)
     const h2 = document.createElement('h2');
     h2.textContent = superhero.name;
     h2.style.fontFamily = 'Bebas Neue';
-    h2.style.fontWeight = 'bold'; 
+    h2.style.fontWeight = 'bold';
 
     container.appendChild(img);
     container.appendChild(h2);
@@ -69,8 +69,8 @@ getHeroDetails(id)
     // Itera sobre as chaves do objeto biography
     for (let key in superhero.biography) {
       const p = document.createElement('p');
-      p.style.fontFamily = 'Bebas Neue'; 
-      p.style.margin = '0';              
+      p.style.fontFamily = 'Bebas Neue';
+      p.style.margin = '0';
       p.textContent = `${key}: ${superhero.biography[key]}`;
       container.appendChild(p);
     }
