@@ -1,14 +1,18 @@
 // comicsSearch.js
-import { getAllSuperHeroes } from './api.js';
+import { getAllSuperHeroes, getHeroByName, allSuperHeroes } from './api.js';
 
-let charactersPerPage = 1;
+let charactersPerPage = 30;
 let currentPosition = 0;
-let allSuperHeroes = []
+
+function clearSuperheroes () {
+    const superheroesContainer = document.querySelector('.container-context-list');
+    superheroesContainer.innerHTML = '';
+}
 
 // Função para criar elementos HTML com as informações do super-herói
 function createComicItem (superhero) {
     const comicItem = document.createElement('div');
-    comicItem.className = 'comic-item shadow-drop-2-center';
+    comicItem.className = 'shadow-drop-2-center comic-item';
 
     const img = document.createElement('img');
     img.src = superhero.images.sm;
@@ -28,7 +32,6 @@ function createComicItem (superhero) {
     comicItem.addEventListener('click', () => {
         getHeroDetails(superhero.id)
             .then(details => {
-                // Display the details in your UI
                 console.log(details);
             })
             .catch(err => {
@@ -44,13 +47,11 @@ function createComicItem (superhero) {
 }
 
 
-
-
 // Função para adicionar os elementos à página
 
 function displaySuperheroes (superheroes) {
     const containerContextList = document.querySelector('.container-context-list');
-    const endPosition = currentPosition + charactersPerPage;
+    let endPosition = currentPosition + charactersPerPage;
 
     superheroes.forEach(superhero => {
         const comicItem = createComicItem(superhero);
@@ -64,7 +65,6 @@ function displaySuperheroes (superheroes) {
 // Chama a função de busca na API
 getAllSuperHeroes()
     .then(superheroes => {
-        allSuperHeroes = superheroes;
         // Exibe as informações dos super-heróis na página
         displaySuperheroes(superheroes);
     })
@@ -73,18 +73,25 @@ getAllSuperHeroes()
     });
 
 
-// Mecanismo de busca
 
+// Mecanismo de busca
 
 document.getElementById('search-input').addEventListener('input', function () {
     const searchTerm = this.value.toLowerCase();
-    const filteredSuperheroes = allSuperHeroes.filter(superhero => {
-        const superheroName = superhero.name.toLowerCase();
-        return superheroName.includes(searchTerm);
-    });
     clearSuperheroes();
-    displaySuperheroes(filteredSuperheroes);
+    if (searchTerm) {
+        const filteredSuperheroes = allSuperHeroes.filter(superhero => {
+            const superheroName = superhero.name.toLowerCase();
+            return superheroName.includes(searchTerm);
+        });
+        displaySuperheroes(filteredSuperheroes);
+    } else {
+        // Se a string de pesquisa estiver vazia, exiba apenas um número limitado de super-heróis
+        displaySuperheroes(allSuperHeroes.slice(0, charactersPerPage));
+    }
 });
+
+
 
 let currentPage = 1;
 const nextPageButton = document.getElementById('nextPage');
@@ -127,8 +134,5 @@ previousPageButton.addEventListener('click', () => {
     }
 });
 
-function clearSuperheroes () {
-    const superheroesContainer = document.querySelector('.container-context-list');
-    superheroesContainer.innerHTML = '';
-}
+
 
