@@ -11,11 +11,7 @@ getHeroDetails(id)
     // Cria e adiciona os elementos HTML para exibir os detalhes do super-herói
     const container = document.querySelector('.container1');
 
-    const containerContextList = document.querySelector('.container-context-list');
-
-
-
-    const backButton = document.createElement('button');
+      const backButton = document.createElement('button');
     backButton.style.backgroundColor = '#ed1d24'; // Cor de fundo
     backButton.style.color = '#fff'; // Cor do texto
     backButton.style.border = 'none'; // Sem borda
