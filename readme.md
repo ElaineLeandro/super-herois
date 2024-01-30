@@ -1,5 +1,4 @@
-Projeto - Super-Herois da Marvel 📲
-💻
+Projeto - Super-Herois da Marvel 🦾
 
 Descrição
 
@@ -32,10 +31,11 @@ Home
 Personagens (Pesquisa)
 → Na página de "Personagens", os usuários podem inserir termos de pesquisa na barra fornecida e visualizar os resultados em cards de super-heróis. Cada card exibe a imagem e o nome do super-herói, sendo clicável para obter mais detalhes.
 
-Desenvolvedores
+Desenvolvedores 
 
-Elaine Leandro
-Paulo 
-Thiago Seta
+
+👩🏼‍💻 Elaine Leandro
+🧑🏻‍💻 Paulo Victor
+👨🏻‍💻 Thiago Seta
 
 
