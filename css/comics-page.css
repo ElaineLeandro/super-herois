@@ -94,13 +94,20 @@ body {
   background-size: cover;
 }
 
-.image {
+.image{
   flex-grow: 1;
   flex-basis: 20%;
+  animation: fadeIn 1.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .image > img {
-  max-width: 100%;
+  max-width: 100%;  
+  border-radius: 15px;
+}
+
+.image > img:hover{
+  transform: scale(1.2);
 }
 
 .container-text {
