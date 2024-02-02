@@ -345,6 +345,10 @@ footer h3 {
 
   .comic-item {
     width: 80%;
+    word-break: auto-phrase;
+  }
+  .comic-item >h2{
+    font-size: 1.25rem;
   }
 
   #previousPage,
